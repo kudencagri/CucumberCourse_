@@ -20,10 +20,14 @@ Feature: Citizenship Functionality
     When Create a Citizenship name as "<name>" short name as "<shortname>"
     Then Already exist message should be displayed
 
+    When User delete the "<name>"
+    Then Success message should be displayed
+
+
     Examples:
       | name     | shortname|
-      | DddAYifK1  | dsqRdi1   |
-      | DddAYifK2  | dsqRdi2   |
-      | DddAYifK3  | dsqRdi3   |
-      | DddAYifK4  | dsqRdi4   |
-      | DddAYifK5  | dsqRdi5   |
+      | DsrjuYidEK1  | dtStRdi1   |
+      | DsrjuYidEK2  | dtStRdi2   |
+      | DsrjuYidEK3  | dtStRdi3   |
+      | DsrjuYidEK4  | dtStRdi4   |
+      | DsrjuYidEK5  | dtStRdi5   |

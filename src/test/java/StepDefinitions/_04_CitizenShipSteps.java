@@ -2,10 +2,16 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNav;
+import Utilities.GWD;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class _04_CitizenShipSteps {
     DialogContent dc=new DialogContent();
@@ -41,5 +47,11 @@ public class _04_CitizenShipSteps {
     @Then("Already exist message should be displayed")
     public void alreadyExistMessageShouldBeDisplayed() {
         dc.verifyContainsText(dc.alreadyExist,"already");
+    }
+
+    @When("User delete the {string}")
+    public void userDeleteThe(String name) {
+        dc.deleteItem(name);
+
     }
 }

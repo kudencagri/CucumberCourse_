@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,8 @@ public class DialogContent extends Parent {
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(),this);
     }
+    public WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(2));
+
 
     @FindBy(xpath = "//*[@formcontrolname='username']")
     public WebElement username;
@@ -41,6 +44,33 @@ public class DialogContent extends Parent {
     public WebElement shortname;
     @FindBy(xpath="//div[contains(text(),'already exists')]")
     public WebElement alreadyExist;
+    @FindBy(xpath ="//ms-text-field[contains(@placeholder,'NAME')]/input[@placeholder='Name']")
+    public WebElement searchInput;
+    @FindBy(xpath = "//ms-search-button")
+    public WebElement searchButton;
+    @FindBy(xpath = "//ms-delete-button[@class='ng-star-inserted']/button[1]")
+    public WebElement deleteImgBttn;
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement deleteDialogBttn;
+
+
+
+
+
+
+
+
+    public void deleteItem(String searchText){
+        mySendKeys(searchInput,searchText);
+        myClick(searchButton);
+        // 1. yol %90 çözüm
+        //        wait.until(ExpectedConditions.elementToBeClickable(dc.searchButton));
+        // 2. yol %100 çözüm
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//*[contains(@class,'loading-shade')]/*"),0));
+        myClick(deleteImgBttn);
+        myClick(deleteDialogBttn);
+
+    }
 
 
 
