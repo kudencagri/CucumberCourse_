@@ -52,9 +52,12 @@ public class DialogContent extends Parent {
     public WebElement deleteImgBttn;
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement deleteDialogBttn;
-
-
-
+    @FindBy(xpath="//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
+    private WebElement integrationCode;
+    @FindBy(xpath="//ms-integer-field[@formcontrolname='priority']/input")
+    private WebElement priorityCode;
+    @FindBy(xpath="//*[text()='Active'][@class]")
+    private WebElement toggleBar;
 
 
 
@@ -68,7 +71,23 @@ public class DialogContent extends Parent {
         // 2. yol %100 çözüm
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//*[contains(@class,'loading-shade')]/*"),0));
         myClick(deleteImgBttn);
-        myClick(deleteDialogBttn);
+        myClick(deleteDialogBttn);}
+
+    public WebElement getWebElement(String strElement){
+        switch (strElement){
+            case "addButton"       :return this.addButton;
+            case "saveButton"      :return this.saveButton;
+            case "nameInput"       :return this.nameInput;
+            case "codeInput"       :return this.codeInput;
+            case "shortname"       :return this.shortname;
+            case "integrationCode" :return this.integrationCode;
+            case "priorityCode"    :return this.priorityCode;
+            case "toggleBar"       :return this.toggleBar;
+
+
+
+        }
+        return null;
 
     }
 
