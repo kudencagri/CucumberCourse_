@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.List;
 
 public class DialogContent extends Parent {
     public DialogContent() {
@@ -58,6 +59,23 @@ public class DialogContent extends Parent {
     private WebElement priorityCode;
     @FindBy(xpath="//*[text()='Active'][@class]")
     private WebElement toggleBar;
+    @FindBy(xpath="//mat-select//span[text()='Academic Period']")
+    private WebElement academicPeriod;
+
+    @FindBy(xpath="//mat-option/span")
+    private WebElement academicPeriod1;
+
+    @FindBy(xpath="(//span[text()='Grade Level'])[1]")
+    private WebElement gradeLevel;
+
+    @FindBy(xpath = "(//*[@role='option'])[4]")
+    private WebElement gradeLevel2;
+
+    @FindBy(xpath="//mat-select//span[text()='Test 2024']")
+    private WebElement searchAcademicPeriod;
+
+    @FindBy(xpath = "//tbody[@role='rowgroup']//tr//td[2]")
+    public List<WebElement> nameList;
 
 
 
@@ -75,14 +93,19 @@ public class DialogContent extends Parent {
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
-            case "addButton"       :return this.addButton;
-            case "saveButton"      :return this.saveButton;
-            case "nameInput"       :return this.nameInput;
-            case "codeInput"       :return this.codeInput;
-            case "shortname"       :return this.shortname;
-            case "integrationCode" :return this.integrationCode;
-            case "priorityCode"    :return this.priorityCode;
-            case "toggleBar"       :return this.toggleBar;
+            case "addButton"              :return this.addButton;
+            case "saveButton"             :return this.saveButton;
+            case "nameInput"              :return this.nameInput;
+            case "codeInput"              :return this.codeInput;
+            case "shortname"              :return this.shortname;
+            case "integrationCode"        :return this.integrationCode;
+            case "priorityCode"           :return this.priorityCode;
+            case "toggleBar"              :return this.toggleBar;
+            case "academicPeriod"         : return this.academicPeriod;
+            case "academicPeriod1"        : return this.academicPeriod1;
+            case "gradeLevel"             : return this.gradeLevel;
+            case "gradeLevel2"            : return this.gradeLevel2;
+            case "searchAcademicPeriod"   : return this.searchAcademicPeriod;
 
 
 

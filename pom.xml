@@ -15,6 +15,8 @@
     </properties>
 
     <dependencies>
+
+
         <!--    bana bi Selenium Web Driver-->
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -22,6 +24,7 @@
             <artifactId>selenium-java</artifactId>
             <version>4.11.0</version>
         </dependency>
+
 
         <!--    bana bi cucumber-->
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
