@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
         // aşağıdaki bütün testlerden @SmokeTest tag i olanları çalıştır
         tags = "@SmokeTest or @Regression",              // smoke yada regregresion testi çalıştır...
         features = {"src/test/java/FeatureFiles"},
-        glue={"StepDefinitions"}
+        glue={"StepDefinitions","Utilities"}
 
 
 )

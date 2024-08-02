@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = {"src/test/java/FeatureFiles"},//klasördeki bütün featurelar
-        glue={"StepDefinitions"}
+        glue={"StepDefinitions","Utilities"}
 )
 public class _03_TestRunnerAll extends AbstractTestNGCucumberTests {
 }
