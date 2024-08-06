@@ -59,19 +59,14 @@ public class DialogContent extends Parent {
     private WebElement toggleBar;
     @FindBy(xpath="//mat-select//span[text()='Academic Period']")
     private WebElement academicPeriod;
-
     @FindBy(xpath="//mat-option/span")
     private WebElement academicPeriod1;
-
     @FindBy(xpath="(//span[text()='Grade Level'])[1]")
     private WebElement gradeLevel;
-
     @FindBy(xpath = "(//*[@role='option'])[4]")
     private WebElement gradeLevel2;
-
     @FindBy(xpath="//mat-select//span[text()='Test 2024']")
     private WebElement searchAcademicPeriod;
-
     @FindBy(xpath = "//tbody[@role='rowgroup']//tr//td[2]")
     public List<WebElement> nameList;
 
