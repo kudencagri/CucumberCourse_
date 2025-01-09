@@ -30,7 +30,7 @@ public class _14_JDBCSteps {
         // karşılaştır.
         for (int i = 0; i < dbList.size(); i++) {
             System.out.println( dbList.get(i).get(0)+"- "+UIList.get(i).getText());
-            Assert.assertEquals( dbList.get(i).get(0).trim(), UIList.get(i).getText().trim(),"Eşleştirme yapılamadı");
+            Assert.assertEquals( dbList.get(i).get(0).trim(), UIList.get(i).getText().trim(),"Eşleştirme yapılamadı"); // trim sağında solunda hata oluşturmamasın diye.
         }
     }
 

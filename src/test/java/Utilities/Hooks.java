@@ -3,6 +3,8 @@ package Utilities;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 // işlem yapmadan önce 1 kerelik birşey wep site aç yada kapat için yapılmış her
 // Scneario dan önce başlar sonra after la her senaryodan sonra biter.

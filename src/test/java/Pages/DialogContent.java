@@ -16,7 +16,7 @@ public class DialogContent extends Parent {
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(),this);
     }
-    public WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(2));
+
 
 
     @FindBy(xpath = "//*[@formcontrolname='username']")
